@@ -1,0 +1,24 @@
+* prettier-org
+
+Format src blocks in org-mode files with prettier.
+
+** Commands
+
++ ~prettier-org-format-all-src-blocks~ (&optional file)
+Format all src block in FILE or current buffer.
+
++ ~prettier-org-format~ (&optional argument)
+Format src body at point with prettier if corresponding parser found.
+Parsers for src languages listed in `prettier-org-src-parsers-alist'.
+Common options listed in `prettier-org-args'.
+Alternatively if ARGUMENT is non-nil (interactively, with prefix argument),
+read prettier options in minibuffer.
+
+** Customization
+
++ ~prettier-org-args~
+List of args to send to prettier command excluding parser.
+Parser is specified in the variable `prettier-org-src-parsers-alist'.
+
++ ~prettier-org-src-parsers-alist~
+Alist of org src languages and corresponding prettier parsers.
